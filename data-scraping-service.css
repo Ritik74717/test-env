@@ -1,0 +1,531 @@
+/* data-scraping-service*/
+
+
+/* body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+} */
+header.hero-data {
+	/* background: linear-gradient(to right, #4A90E2, #145DA0); */
+	color: white;
+	text-align: center;
+	padding: 50px 20px;
+	position: relative;
+   overflow: hidden;
+
+}
+.hero-data-content h2{
+    margin-top: 80px;
+    color: white;
+}
+header.hero-data::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url('wave.svg') repeat-x;
+	background-size: cover;
+	transform: translateY(50%);
+}
+.cta-button {
+	display: inline-block;
+	padding: 10px 20px;
+	background: #F9A826;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: transform 0.3s;
+}
+.cta-button:hover {
+	transform: scale(1.1);
+}
+.about, .services, .process, .testimonials, .faq, .contact {
+	text-align: center;
+	padding: 50px 20px;
+}
+.service-list {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+.service {
+	background: #eee;
+	padding: 30px;
+	border-radius: 5px;
+	width: 250px;
+	transition: transform 0.3s;
+}
+.service:hover {
+	transform: scale(1.1);
+}
+.process-steps {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
+.step {
+	background: #f4f4f4;
+	padding: 20px;
+	border-radius: 5px;
+	width: 280px;
+}
+.faq {
+	background-color: #f9f9f9;
+	padding: 50px 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.faq h2 {
+	font-size: 28px;
+	color: #2c3e50;
+	margin-bottom: 20px;
+	font-weight: 600;
+	text-align: center;
+	border-bottom: 2px solid #3498db;
+	padding-bottom: 10px;
+}
+
+.faq-list {
+	max-width: 800px;
+	margin: auto;
+	text-align: left;
+}
+
+.faq-item {
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 15px;
+	margin-bottom: 15px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+}
+
+.faq-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item strong {
+	color: #3498db;
+}
+
+.faq-answer {
+	display: none;
+	margin-top: 10px;
+}
+
+.faq-item.active .faq-answer {
+	display: block;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	max-width: 400px;
+	margin: auto;
+}
+input, textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+button {
+	background: #4A90E2;
+	color: white;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+button:hover {
+	background: #145DA0;
+}
+
+
+@media (max-width: 1024px) {
+	header.hero-data {
+		padding: 30px 20px;
+	}
+
+	.hero-data-content h2 {
+		font-size: 24px;
+	}
+
+	.hero-data-content p {
+		font-size: 14px;
+	}
+
+	.cta-button {
+		padding: 8px 16px;
+	}
+
+	.service {
+		width: 200px;
+	}
+
+	.step {
+		width: 220px;
+	}
+}
+
+@media (max-width: 768px) {
+	nav ul {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.service-list, .process-steps {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.service, .step {
+		width: 100%;
+		max-width: 300px;
+	}
+
+   
+
+
+   
+
+	/* body {
+		padding: 10px;
+	} */
+
+	header.hero-data{
+		padding: 30px 10px;
+	}
+
+	.hero-data-content h2 {
+		font-size: 24px;
+	}
+
+	.hero-data-content p {
+		font-size: 14px;
+	}
+
+	.cta-button {
+		padding: 8px 16px;
+	}
+
+	.service {
+		width: 100%;
+		max-width: 300px;
+	}
+
+	.step {
+		width: 100%;
+		max-width: 300px;
+	}
+
+	.contact {
+		flex-direction: column;
+	}
+
+	.contact-form, .contact-image {
+		flex: 1 1 100%;
+		margin-bottom: 20px;
+		order: initial;
+	}
+
+	.contact-form {
+		padding: 30px;
+	}
+
+	.contact-form input, .contact-form textarea {
+		font-size: 14px;
+	}
+
+	.contact-form button {
+		font-size: 16px;
+	}
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+	/* header.hero {
+		padding: 20px 10px;
+	} */
+
+	.hero-data-content h2 {
+		font-size: 20px;
+	}
+
+	.hero-data-content p {
+		font-size: 12px;
+	}
+
+	.cta-button {
+		padding: 6px 12px;
+	}
+
+	.service, .step {
+		width: 100%;
+		max-width: 250px;
+	}
+
+	.contact-form {
+		padding: 20px;
+	}
+
+	.contact-form input, .contact-form textarea {
+		font-size: 12px;
+	}
+
+	.contact-form button {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 480px) {
+	header.hero-data {
+		padding: 20px 10px;
+	}
+
+	.hero-data-content h2 {
+		font-size: 20px;
+	}
+
+	.hero-data-content p {
+		font-size: 12px;
+	}
+
+	.cta-button {
+		padding: 6px 12px;
+	}
+
+	.service, .step {
+		width: 100%;
+		max-width: 250px;
+	}
+}
+.services {
+	background-color: #f0f8ff;
+	padding: 50px 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	margin-top: 62px;
+}
+
+.services h2 {
+	font-size: 28px;
+	color: #2c3e50;
+	margin-bottom: 20px;
+	font-weight: 600;
+	text-align: center;
+	border-bottom: 2px solid #3498db;
+	padding-bottom: 10px;
+}
+
+.service-list {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.service {
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 30px;
+	width: 250px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	text-align: center;
+}
+
+.service:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+	font-size: 20px;
+	color: #3498db;
+	margin-bottom: 10px;
+}
+
+.service p {
+	font-size: 14px;
+	color: #555;
+}
+.process {
+	background-color: #f0f8ff;
+	padding: 50px 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.process h2 {
+	font-size: 28px;
+	color: #2c3e50;
+	margin-bottom: 20px;
+	font-weight: 600;
+	text-align: center;
+	border-bottom: 2px solid #3498db;
+	padding-bottom: 10px;
+}
+
+.process-steps {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
+
+.step {
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 20px;
+	width: 280px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	text-align: center;
+}
+
+.step:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step h3 {
+	font-size: 20px;
+	color: #3498db;
+	margin-bottom: 10px;
+}
+
+.step p {
+	font-size: 14px;
+	color: #555;
+}
+.contact {
+	background-color: #e0f7fa;
+	padding: 70px 30px;
+	border-radius: 8px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.contact h2 {
+	font-size: 32px;
+	color: #00796b;
+	margin-bottom: 30px;
+	font-weight: 700;
+	text-align: center;
+	border-bottom: 2px solid #004d40;
+	padding-bottom: 15px;
+	width: 100%;
+}
+
+.contact-form {
+	flex: 1 1 45%;
+	background-color: #004d40;
+	padding: 40px;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	color: white;
+	order: 1;
+}
+
+.contact-form form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+	width: 100%;
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.contact-form button {
+	background: #00796b;
+	color: white;
+	border: none;
+	padding: 15px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background 0.3s;
+	font-size: 18px;
+}
+
+.contact-form button:hover {
+	background: #004d40;
+}
+
+.contact-image {
+	flex: 1 1 45%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	order: 2;
+}
+
+.contact-image img {
+	max-width: 100%;
+	border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+	.contact {
+		flex-direction: column;
+	}
+
+	.contact-form, .contact-image {
+		flex: 1 1 100%;
+		margin-bottom: 20px;
+		order: initial;
+	}
+
+	header.hero-data{
+		background: linear-gradient(to right, #4A90E2, #145DA0);
+	}
+
+	.curve{
+		display: none;
+	}
+}
+.curve {
+	position: absolute;
+	top: 0;
+	left: -35px;
+	width: 106%;
+	height: 376px;
+	background: linear-gradient(to right, #4A90E2, #145DA0);
+	clip-path: ellipse(50% 100% at 50% 0%);
+}
+.hero-data-content img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+
